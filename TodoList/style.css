@@ -1,0 +1,123 @@
+﻿html,
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    font-family: "Indie Flower", cursive;
+    text-align: center;
+    background-color: #12005e;
+}
+
+/* TextBox stili */
+:focus {
+    outline: none;
+}
+
+.input-container {
+    float: center;
+    width: 97%;
+    margin-top: 38px;
+    margin-bottom: 11px;
+    position: relative;
+    border: 1px solid teal;
+    box-shadow: 1px 1px 1px 2px #004679;
+}
+
+input[type="text"] {
+    text-align: center;
+    color: #12005e;
+    width: 100%;
+    font-size: 1.1rem;
+    box-sizing: border-box;
+    letter-spacing: 1.7px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+}
+
+.effect-1 ~ .focus-border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #3399ff;
+    transition: 0.3s;
+}
+
+.effect-1:focus ~ .focus-border {
+    width: 95%;
+    transition: 0.45s;
+}
+/*TextBox Stili*/
+
+.container {
+    width: 70%;
+    height: 96vh;
+    position: relative;
+    margin-bottom: 5px auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: white;
+    background-image: repeating-linear-gradient(white 0px, white 24px, teal 25px);
+    box-shadow: 0px 0px 5px 0px #888;
+}
+
+    .container::before {
+        content: "";
+        width: 2px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 40px;
+        background-color: rgba(255, 0, 0, 0.6);
+    }
+
+.will-be-done,
+.done {
+    margin: 0 auto;
+    padding-top: 8px;
+    padding-left: 1vw;
+    padding-right: 0.5vw;
+    line-height: 25px;
+    font-family: "Dancing Script", cursive;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+}
+
+li:hover {
+    border: 1px solid #12005e;
+    background-color: #e7f5ff;
+    box-shadow: 1px 1px 1px 2px #000000;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.done ul {
+    list-style: disc;
+    padding-top: 16px;
+    color: rgb(95, 95, 95);
+    text-decoration: line-through;
+    text-align: start;
+}
+
+.will-be-done ul {
+    list-style: circle;
+    padding-top: 16px;
+    color: black;
+    text-align: start;
+}
+
+.remove,
+.complete,
+.not-complete {
+    float: inline-end;
+    padding-right: 0.2vw;
+    margin: 3px auto;
+}

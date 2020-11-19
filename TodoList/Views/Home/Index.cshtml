@@ -1,0 +1,46 @@
+﻿@model TodoList.Models.TaskListViewModel
+
+@{
+    ViewBag.Title = "Todo List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row justify-content-center">
+    <div class="col-10">
+        <h1 style="font-size: 3rem; color: rgb(179, 0, 0);">TODO List</h1>
+        <h3 class="score" style="padding-top: 7px;">Score: 0</h3>
+        <div class="input-container">
+            <input class="effect-1"
+                   type="text"
+                   placeholder="Add a new task..." />
+            <span class="focus-border">
+        </div>
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-md-6 col-sm-12">
+        <div class="will-be-done">
+            <h3>Will Be Done</h3>
+            <ul id="items">
+                @foreach (var item in Model.WillBeDoneTasks)
+                {
+                <li>
+                    @item.TaskName <i class="remove fa fa-trash"></i> <i class="complete fa fa-check"></i>
+                </li>
+                }
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-12">
+        <div class="done">
+            <h3>Done</h3>
+            <ul>
+                @foreach (var item in Model.DoneTasks)
+                {
+                    <li>
+                        @item.TaskName <i class="remove fa fa-trash"></i> <i class="not-complete fa fa-undo"></i>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
