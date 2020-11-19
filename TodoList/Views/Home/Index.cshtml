@@ -24,7 +24,7 @@
                 @foreach (var item in Model.WillBeDoneTasks)
                 {
                 <li>
-                    @item.TaskName <i class="remove fa fa-trash"></i> <i class="complete fa fa-check"></i>
+                    @item.Id @item.TaskName <i class="remove fa fa-trash"></i> <i class="complete fa fa-check"></i>
                 </li>
                 }
             </ul>
@@ -37,7 +37,7 @@
                 @foreach (var item in Model.DoneTasks)
                 {
                     <li>
-                        @item.TaskName <i class="remove fa fa-trash"></i> <i class="not-complete fa fa-undo"></i>
+                       @item.Id @item.TaskName <i class="remove fa fa-trash"></i> <i class="not-complete fa fa-undo"></i>
                     </li>
                 }
             </ul>

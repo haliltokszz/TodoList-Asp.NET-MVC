@@ -15,15 +15,13 @@ namespace TodoList.Controllers
         {
             List<Task> tasks = new List<Task>
             {
-                new Task{Id=1, TaskName="Make a Sandwich", isDone=false},
-                new Task{Id=2, TaskName="Make a Bil359 Homework", isDone=true},
-                new Task{Id=3, TaskName="Write a Code", isDone=false},
-                new Task{Id=3, TaskName="Read a book", isDone=true},
-                new Task{Id=3, TaskName="Make breakfast", isDone=true},
-                new Task{Id=3, TaskName="Tidy the room", isDone=false}
+                new Task{TaskName="Make a Sandwich", isDone=false},
+                new Task{TaskName="Make a Bil359 Homework", isDone=true},
+                new Task{TaskName="Write a Code", isDone=false},
+                new Task{TaskName="Read a book", isDone=true},
+                new Task{TaskName="Make breakfast", isDone=true},
+                new Task{TaskName="Tidy the room", isDone=false}
             };
-
-            Task task1 = new Task { Id = 1, TaskName = "Make a Sandwich", isDone = false };
 
             TaskListViewModel model = new TaskListViewModel();
             foreach(var task in tasks)

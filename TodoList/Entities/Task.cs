@@ -7,9 +7,14 @@ namespace TodoList.Entities
 {
     public class Task
     {
-        public int Id { get; set; }
+        private static int id = 0;
+        public int Id { get; }
         public string TaskName { get; set; }
         public bool isDone { get; set; }
 
+        public Task()
+        {
+            this.Id = id++;
+        }
     }
 }
